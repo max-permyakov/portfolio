@@ -43,9 +43,7 @@ body::before {
   position: relative;
   overflow: hidden;
 }
-br{
-  color: #ffffff;
-}
+
 .hero h1 {
   font-size: 3em;
   margin-bottom: 0.3em;
@@ -77,7 +75,43 @@ br{
 .hero-button i {
   margin-right: 8px;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #22003a;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(106, 13, 173, 0.08);
+  max-width: 600px;
+  margin: 30px auto;
+}
 
+ul li {
+  padding: 16px 24px;
+  border-bottom: 1px solid #3d1766;
+  color: #e0d4ff;
+  font-size: 1.1em;
+  transition: background 0.2s;
+  position: relative;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li:hover {
+  background: #30084d;
+  color: #d1b3ff;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "•";
+  color: #caa7ff;
+  font-size: 1.3em;
+  margin-right: 12px;
+  vertical-align: middle;
+}
 /* Sections */
 section {
   padding: 80px 20px;
@@ -186,7 +220,7 @@ footer {
 }
 
 /* Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .hero h1 { font-size: 2.2em; }
   h2 { font-size: 1.8em; }
   .project-card{
