@@ -213,56 +213,7 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
 }
-.another-projects .project-list {
-  display: grid;
-  /* increase min width so images and card body have more room */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 28px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.another-projects .project-list .another-projects-card {
-  /* match .project-card styles so these cards look the same */
-  background: #2e004f;
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-}
 
-.another-projects .project-list .another-projects-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.another-projects .project-list .another-projects-card .card-body {
-  color: #e0d4ff;
-}
-
-.another-projects .project-list .another-projects-card h3 {
-  margin-bottom: 0.5em;
-}
-
-.another-projects .project-list .another-projects-card a {
-  color: #d1b3ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.another-projects .project-list .another-projects-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(209, 179, 255, 0.3);
-}
-
-.another-projects .project-list .another-projects-card:hover img {
-  height: auto;
-  transform: none;
-  filter: none;
-}
 .project-card img {
   width: 100%;
   height: 130px;
@@ -421,27 +372,4 @@ footer {
   height: auto;
   object-fit: cover;
 }
-  .another-projects .project-list {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 0 10px;
-  }
-  .another-projects .project-list .another-projects-card {
-    flex-direction: row;
-    align-items: center;
-    padding: 12px;
-  }
-  .another-projects .project-list .another-projects-card {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(46,0,79,0.95), rgba(46,0,79,0.80));
-    padding: 16px;
-    border-radius: 14px;
-    transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s;
-    position: relative;
-    overflow: hidden;
-    min-height: 140px;
-    box-shadow: 0 6px 26px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
-  }
 }
