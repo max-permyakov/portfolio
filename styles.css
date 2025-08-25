@@ -16,19 +16,84 @@ body {
   overflow-x: hidden;
 }
 
-/* Background Animation */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(106, 13, 173, 0.2), transparent 70%);
-  animation: pulse 15s infinite ease-in-out;
-  z-index: -1;
+/* Background Animation (enhanced) */
+:root{
+  --bg-1: rgba(106,13,173,0.18);
+  --bg-2: rgba(48,6,77,0.10);
+  --accent-1: rgba(209,179,255,0.08);
+  --accent-2: rgba(0,122,255,0.05);
 }
 
+body::before {
+  /* two large soft radial blobs that slowly move & pulse */
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background-image:
+    radial-gradient(circle at 10% 20%, var(--bg-1) 0%, transparent 35%),
+    radial-gradient(circle at 85% 80%, var(--bg-2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,0.02) 0%, transparent 12%);
+  background-repeat: no-repeat;
+  background-size: 120% 120%, 140% 140%, 200% 200%;
+  mix-blend-mode: screen;
+  filter: blur(40px) saturate(1.05);
+  animation: blobMove 18s linear infinite, blobPulse 18s ease-in-out infinite;
+  will-change: transform, opacity, background-position;
+}
+
+body::after {
+  /* subtle moving colored linear gradient + twinkling stars layer */
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(120deg, rgba(106,13,173,0.10), rgba(0,122,255,0.06), rgba(58,12,84,0.08)),
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02) 0%, transparent 6%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.015) 0%, transparent 5%),
+    /* stars pattern (many small dots simulated with repeating-radial-gradient) */
+    repeating-radial-gradient(circle at 10% 10%, rgba(255,255,255,0.0) 0 1px, rgba(255,255,255,0.02) 1px 1.5px, transparent 1.6px 6px);
+  background-blend-mode: screen, screen, screen, normal;
+  background-size: 200% 200%, 150% 150%, 220% 220%, 120% 120%;
+  filter: blur(14px) contrast(1.02);
+  animation: gradientShift 36s linear infinite reverse, starsTwinkle 6s steps(8, end) infinite;
+  opacity: 0.95;
+  will-change: filter, transform, opacity, background-position;
+}
+
+/* keyframes */
+@keyframes blobMove {
+  0%   { background-position: 0% 0%, 100% 100%, 0% 0%; transform: translateZ(0); }
+  50%  { background-position: 20% 30%, 80% 60%, 10% 5%; }
+  100% { background-position: 0% 0%, 100% 100%, 0% 0%; }
+}
+
+@keyframes blobPulse {
+  0%   { opacity: 0.85; transform: scale(1); }
+  40%  { opacity: 0.95; transform: scale(1.06); }
+  70%  { opacity: 0.88; transform: scale(1.02); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 0%, 100% 100%, 0% 0%, 0% 0%; }
+  50%  { background-position: 40% 60%, 60% 40%, 30% 10%, 50% 60%; }
+  100% { background-position: 0% 0%, 100% 100%, 0% 0%, 0% 0%; }
+}
+
+/* stars twinkle using stepped opacity changes for a subtle shimmering effect */
+@keyframes starsTwinkle {
+  0%   { opacity: 0.55; filter: blur(14px) }
+  25%  { opacity: 0.68; filter: blur(12px) }
+  50%  { opacity: 0.58; filter: blur(14px) }
+  75%  { opacity: 0.64; filter: blur(13px) }
+  100% { opacity: 0.55; filter: blur(14px) }
+}
+
+/* legacy pulse kept for components that reference it */
 @keyframes pulse {
   0% { transform: scale(1); opacity: 0.3; }
   50% { transform: scale(1.2); opacity: 0.5; }
