@@ -3,516 +3,765 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфолио Максима Пермякова</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/ffffff/code.png">
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Максим Пермяков — Full-stack разработчик · .NET / React</title>
+  <meta name="description" content="Портфолио full-stack разработчика: ASP.NET Core, C#, React, TypeScript, Python. Collegium, XenonStore, Prime Messenger и Telegram-боты с локальным AI." />
+  <meta name="author" content="Максим Пермяков" />
+  <meta name="theme-color" content="#070a09" />
+  <link rel="canonical" href="https://max-permyakov.github.io/portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Максим Пермяков" />
+  <meta property="og:title" content="Максим Пермяков — Full-stack разработчик" />
+  <meta property="og:description" content="ASP.NET Core, C#, React, TypeScript, Python. Проекты от схемы базы данных до деплоя." />
+  <meta property="og:url" content="https://max-permyakov.github.io/portfolio/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/224455142?v=4" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070a09'/%3E%3Cpath d='M21 22l-8 10 8 10M43 22l8 10-8 10' stroke='%2300e08a' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="app.js" defer></script>
 </head>
-<body>
-  <!-- Hero Section with Typing Effect -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="profile-glow"></div>
-      <h1 data-aos="fade-down" data-aos-duration="1000">Привет!</h1>
-      <h1 class="name-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Я <span class="gradient-text">Максим Пермяков</span></h1>
-      <h2 class="header-info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-        <i class="fas fa-code"></i> backend-разработчик
-      </h2>
-      <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-        <span class="typing-text"></span><span class="cursor">|</span>
-      </p>
-      <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-        <a href="#projects" class="hero-button primary">
-          <i class="fas fa-rocket"></i> Мои проекты
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Перейти к содержимому</a>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-telegram" viewBox="0 0 24 24">
+      <path d="M21.94 4.26c.32-1.34-.48-1.87-1.7-1.4L2.7 10.05c-1.3.51-1.28 1.26-.22 1.59l4.5 1.4 10.47-6.6c.49-.31.94-.14.57.17l-8.47 7.65-.32 4.32c.46 0 .66-.21.92-.46l2.2-2.14 4.58 3.38c.84.46 1.44.22 1.65-.78L21.94 4.26Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path d="M8.5 6 2.5 12l6 6M15.5 6l6 6-6 6M13.5 3l-3 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="MP max-permyakov_ — на главную">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">max-permyakov<span class="brand-cursor" aria-hidden="true">_</span></span>
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Основная навигация">
+        <a href="#about" data-i18n="nav.about">Обо мне</a>
+        <a href="#work" data-i18n="nav.work">Флагман</a>
+        <a href="#projects" data-i18n="nav.projects">Проекты</a>
+        <a href="#stack" data-i18n="nav.stack">Стек</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+        <a class="nav-cta" href="https://t.me/Massimo_16" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="nav.cta">Связаться</span>
+          <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
         </a>
-        <a href="#about" class="hero-button secondary">
-          <i class="fas fa-user"></i> Обо мне
-        </a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Язык / Language">
+          <button type="button" data-lang="ru" class="is-active">RU</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Меню / Menu">
+          <svg class="menu-icon" aria-hidden="true"><use href="#icon-menu"/></svg>
+          <svg class="close-icon" aria-hidden="true"><use href="#icon-close"/></svg>
+        </button>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <i class="fas fa-chevron-down"></i>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="about section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-user"></i> <strong>Обо мне</strong></h2>
-      
-      <div class="about-grid">
-        <div class="about-card info-card" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Образование</h3>
-          <p>Краснодарский колледж электронного приборостроения</p>
-          <span class="specialty">Информационные системы и программирование</span>
-        </div>
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Открыт к предложениям</span>
+          </p>
 
-        <div class="about-card goal-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Цель</h3>
-          <p>Стать профессиональным backend-разработчиком и создавать масштабные проекты</p>
-        </div>
+          <p class="hero-greeting">
+            <span class="mono accent">01</span>
+            <span data-i18n="hero.greeting">Привет, я</span>
+          </p>
 
-        <div class="about-card tech-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="card-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3>Стек технологий</h3>
-          <div class="tech-stack">
-            <span class="tech-badge csharp">C#</span>
-            <span class="tech-badge dotnet">.NET</span>
-            <span class="tech-badge python">Python</span>
-            <span class="tech-badge js">JavaScript</span>
-            <span class="tech-badge sql">SQL</span>
-          </div>
-        </div>
-      </div>
+          <h1 class="hero-name" id="heroTitle">
+            <span data-i18n="hero.firstName">Максим</span><br />
+            <span data-i18n="hero.lastName">Пермяков</span><span class="hero-dot" aria-hidden="true">.</span>
+          </h1>
 
-      <div class="skills-section" data-aos="fade-up" data-aos-delay="400">
-        <h3><i class="fas fa-tools"></i> Навыки</h3>
-        <div class="skills-container">
-          <div class="skill-item">
-            <div class="skill-header">
-              <span><i class="fab fa-microsoft"></i> C# / .NET</span>
-              <span class="skill-percent">75%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 75%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header">
-              <span><i class="fab fa-python"></i> Python</span>
-              <span class="skill-percent">65%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 65%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header">
-              <span><i class="fab fa-js"></i> JavaScript</span>
-              <span class="skill-percent">60%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 60%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header">
-              <span><i class="fas fa-database"></i> SQL</span>
-              <span class="skill-percent">55%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 55%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header">
-              <span><i class="fab fa-linux"></i> Linux</span>
-              <span class="skill-percent">50%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" style="--progress: 50%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <p class="hero-role">
+            <span class="accent" data-i18n="hero.role">Full-stack разработчик</span>
+            <span class="hero-role-divider" aria-hidden="true">/</span>
+            <span class="mono">.NET · React · TypeScript</span>
+          </p>
 
-      <div class="learning-section" data-aos="fade-up" data-aos-delay="500">
-        <h3><i class="fas fa-book-open"></i> Изучаю сейчас</h3>
-        <ul class="learning-list">
-          <li><a href="https://dotnet.microsoft.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> .NET Core / ASP.NET</a></li>
-          <li><a href="https://developer.mozilla.org/ru/docs/Web/HTTP" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> REST API</a></li>
-          <li><a href="https://xunit.net/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> Unit-тестирование</a></li>
-          <li><a href="https://entityframework.net/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> Entity Framework / ORM</a></li>
-          <li><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> Java</a></li>
-          <li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> TypeScript</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+          <p class="hero-bio" data-i18n="hero.bio">
+            Проектирую backend на C# и ASP.NET Core, собираю интерфейсы на React и TypeScript. Делаю проекты от схемы базы данных до деплоя — с чистой архитектурой, тестами и понятной документацией.
+          </p>
 
-  <!-- Featured Project Section -->
-  <section class="featured-project section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-star"></i> <strong>Флагманский проект</strong></h2>
-      
-      <div class="featured-card" data-aos="zoom-in">
-        <div class="featured-content">
-          <div class="featured-badge">
-            <i class="fas fa-crown"></i> TOP PROJECT
-          </div>
-          <h3><i class="fas fa-robot"></i> Prime Messenger</h3>
-          <p class="project-subtitle">Мессенджер с AI-ассистентом на базе Ollama</p>
-          
-          <div class="featured-description">
-            <p>Современный мессенджер с интеграцией искусственного интеллекта. Включает веб-приложение, Telegram-бота и локальный AI-сервер.</p>
-          </div>
-
-          <div class="featured-features">
-            <div class="feature-item">
-              <i class="fas fa-comments"></i>
-              <span>Личные и групповые чаты</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-brain"></i>
-              <span>AI-ассистент Prime AI</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-file-upload"></i>
-              <span>Обмен файлами до 5 ГБ</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-palette"></i>
-              <span>Темы оформления</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-shield-alt"></i>
-              <span>JWT аутентификация</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-mobile-alt"></i>
-              <span>Адаптивный дизайн</span>
-            </div>
-          </div>
-
-          <div class="tech-tags">
-            <span class="tag dotnet">.NET 10</span>
-            <span class="tag react">React 19</span>
-            <span class="tag python">Python</span>
-            <span class="tag ollama">Ollama AI</span>
-            <span class="tag signalr">SignalR</span>
-            <span class="tag sql">SQL Server</span>
-          </div>
-
-          <div class="featured-buttons">
-            <a href="https://github.com/max-permyakov/MessengerWithAi" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <i class="fab fa-github"></i> Смотреть на GitHub
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              <span data-i18n="hero.ctaProjects">Смотреть проекты</span>
+              <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
             </a>
-            <a href="https://github.com/max-permyakov/MessengerWithAi/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-              <i class="fas fa-book"></i> Документация
+            <a class="btn btn-ghost" href="#contact">
+              <span data-i18n="hero.ctaContact">Обсудить проект</span>
             </a>
           </div>
+
+          <dl class="hero-meta">
+            <div>
+              <dt data-i18n="hero.metaLocation">Локация</dt>
+              <dd data-i18n="hero.locationValue">Краснодар, Россия</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.metaTimezone">Часовой пояс</dt>
+              <dd class="mono">UTC+3</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.metaFocus">Фокус</dt>
+              <dd class="mono">Web · AI · Bots</dd>
+            </div>
+          </dl>
         </div>
-        <div class="featured-image">
-          <div class="image-placeholder">
-            <i class="fas fa-robot"></i>
-            <span>Prime Messenger</span>
+
+        <div class="hero-code">
+          <div class="code-window">
+            <div class="code-bar">
+              <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="code-path mono">~/developer.ts</span>
+              <span class="code-badge mono">TS</span>
+            </div>
+            <pre class="code" tabindex="0" aria-label="Пример кода"><code><span class="code-line"><span class="tok-com">// full-stack developer</span></span>
+<span class="code-line"><span class="tok-key">const</span> <span class="tok-var">developer</span> = {</span>
+<span class="code-line">  name: <span class="tok-str">"<span data-i18n="hero.nameFull">Максим Пермяков</span>"</span>,</span>
+<span class="code-line">  role: <span class="tok-str">"Full-stack Developer"</span>,</span>
+<span class="code-line">  stack: [<span class="tok-str">"C#"</span>, <span class="tok-str">".NET"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"TypeScript"</span>],</span>
+<span class="code-line">  focus: [<span class="tok-str">"clean architecture"</span>, <span class="tok-str">"AI"</span>, <span class="tok-str">"tools"</span>],</span>
+<span class="code-line">  location: <span class="tok-str">"Krasnodar, RU"</span>,</span>
+<span class="code-line">  openToWork: <span class="tok-bool">true</span>,</span>
+<span class="code-line">};</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="tok-key">export default</span> <span class="tok-var">developer</span>;</span>
+<span class="code-line"><span class="cursor" aria-hidden="true">▌</span></span></code></pre>
+            <div class="code-status mono">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>dotnet run</span>
+              <span class="code-status-right">ready in 412 ms</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- GitHub Projects Section -->
-  <section id="projects" class="projects section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-code"></i> <strong>Мои проекты на GitHub</strong></h2>
-      
-      <div class="project-list">
-        <!-- Prime Messenger Card -->
-        <div class="project-card featured" data-aos="flip-left" data-aos-delay="100">
-          <a class="card-link" href="https://github.com/max-permyakov/ChatBotWIthOllama" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <div class="card-image-placeholder">
-                <i class="fas fa-robot"></i>
-              </div>
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-              <span class="featured-label"><i class="fas fa-crown"></i> Флагманский</span>
-            </div>
-            <div class="card-body">
-              <h3><i class="fas fa-robot"></i> Prime Messenger</h3>
-              <p>Мессенджер с AI на Ollama: .NET + React + Python</p>
-              <div class="card-tech">
-                <span>.NET</span>
-                <span>React</span>
-                <span>Python</span>
-              </div>
-            </div>
-          </a>
+      <div class="container hero-foot">
+        <span class="mono" data-i18n="hero.scroll">Листайте вниз</span>
+        <span class="hero-scroll-line" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Статистика">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-label" data-i18n="stats.repos">публичных репозиториев</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">08</span>
+          <span class="stat-label" data-i18n="stats.projects">проектов в портфолио</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">02</span>
+          <span class="stat-label" data-i18n="stats.prod">проекта в продакшене</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">03</span>
+          <span class="stat-label" data-i18n="stats.langs">языка в основном стеке</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-num mono">01</p>
+          <h2 class="section-title" id="aboutTitle" data-i18n="about.title">Обо мне</h2>
+          <p class="section-lead" data-i18n="about.lead">
+            Не просто пишу код — довожу проекты до состояния, которым можно пользоваться.
+          </p>
         </div>
 
-        <!-- Snake Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-          <a class="card-link" href="https://github.com/max-permyakov/Snake-in-Console-CS" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/snake.png" alt="Snake Game">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="about.p1">
+              Я студент и разработчик из Краснодара. Начинал с консольных задач на C#, сейчас строю full-stack приложения: ASP.NET Core на бэкенде, React и TypeScript на фронтенде, PostgreSQL или SQL Server под капотом.
+            </p>
+            <p data-i18n="about.p2">
+              Отдельное увлечение — локальные языковые модели. Делаю Telegram-ботов и мессенджеры на Ollama, чтобы AI работал без отправки личных данных в облако.
+            </p>
+
+            <ul class="facts">
+              <li>
+                <span class="fact-num mono">01</span>
+                <div>
+                  <h3 data-i18n="about.eduTitle">Образование</h3>
+                  <p data-i18n="about.eduValue">Краснодарский колледж электронного приборостроения</p>
+                  <span class="fact-note mono" data-i18n="about.eduNote">Информационные системы и программирование</span>
+                </div>
+              </li>
+              <li>
+                <span class="fact-num mono">02</span>
+                <div>
+                  <h3 data-i18n="about.approachTitle">Подход</h3>
+                  <p data-i18n="about.approachValue">Сначала архитектура и данные, потом код. Тесты и README — часть задачи, а не опция.</p>
+                </div>
+              </li>
+              <li>
+                <span class="fact-num mono">03</span>
+                <div>
+                  <h3 data-i18n="about.deployTitle">Деплой</h3>
+                  <p data-i18n="about.deployValue">Docker, Linux, systemd, Cloudflare Tunnel. Умею довести проект до рабочего домена.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="now-card" aria-labelledby="nowTitle">
+            <div class="now-head">
+              <span class="mono accent">$</span>
+              <h3 id="nowTitle" data-i18n="about.nowTitle">Сейчас</h3>
+              <span class="now-pulse" aria-hidden="true"></span>
             </div>
-            <div class="card-body">
-              <h3><i class="fas fa-gamepad"></i> Snake-in-Console-CS</h3>
-              <p>Легендарная змейка в консоли 🐍</p>
-              <div class="card-tech">
-                <span>C#</span>
-                <span>Console</span>
-              </div>
-            </div>
-          </a>
+            <ul class="now-list">
+              <li><span class="mono">01</span><span data-i18n="about.now1">Развиваю Collegium — портал для студентов колледжа</span></li>
+              <li><span class="mono">02</span><span data-i18n="about.now2">Углубляюсь в чистую архитектуру и тестирование</span></li>
+              <li><span class="mono">03</span><span data-i18n="about.now3">Экспериментирую с локальными LLM на Ollama</span></li>
+              <li><span class="mono">04</span><span data-i18n="about.now4">Решаю задачи на LeetCode на C#</span></li>
+            </ul>
+            <blockquote class="now-quote" data-i18n="about.quote">
+              Хороший код читается как хорошая документация.
+            </blockquote>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-num mono">02</p>
+          <h2 class="section-title" id="workTitle" data-i18n="featured.title">Флагманский проект</h2>
+          <p class="section-lead" data-i18n="featured.lead">Проект, который уже работает и приносит пользу.</p>
         </div>
 
-        <!-- Algorithms Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="300">
-          <a class="card-link" href="https://github.com/max-permyakov/Learn-main-algorithms-CS" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/robotdoska.png" alt="Algorithms">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
+        <article class="featured" data-reveal>
+          <div class="featured-copy">
+            <div class="featured-top">
+              <span class="badge">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="featured.badge">В продакшене</span>
+              </span>
+              <span class="mono featured-domain">kkep-ka.ru</span>
             </div>
-            <div class="card-body">
-              <h3><i class="fas fa-chess-knight"></i> Learn-main-algorithms-CS</h3>
-              <p>Алгоритмы на C# </p>
-              <div class="card-tech">
-                <span>C#</span>
-                <span>Algorithms</span>
+
+            <h3 class="featured-name">Collegium<span class="accent">.</span></h3>
+            <p class="featured-subtitle" data-i18n="featured.subtitle">Портал для студентов колледжа</p>
+            <p class="featured-desc" data-i18n="featured.desc">
+              Единое окно в жизнь колледжа: расписание, оценки, задания, новости. Объединяет данные электронного дневника и API расписания в одном интерфейсе с современным UX.
+            </p>
+
+            <ul class="feature-list">
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="featured.f1">Расписание, оценки и успеваемость из электронного дневника</span></li>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="featured.f2">Вход по email-коду или через Google, GitHub, Яндекс и VK</span></li>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="featured.f3">Чистая архитектура: Api / Application / Domain / Infrastructure</span></li>
+              <li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="featured.f4">PostgreSQL, EF Core, React Query, Swagger и xUnit</span></li>
+            </ul>
+
+            <div class="tech-tags">
+              <span>.NET 10</span>
+              <span>ASP.NET Core</span>
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>PostgreSQL</span>
+              <span>EF Core</span>
+              <span>Docker</span>
+            </div>
+
+            <div class="featured-actions">
+              <a class="btn btn-primary" href="https://kkep-ka.ru" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="featured.visit">Открыть сайт</span>
+                <svg aria-hidden="true"><use href="#icon-external"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/max-permyakov/Collegium" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="featured.code">Исходный код</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-visual">
+            <div class="code-window code-window--tree">
+              <div class="code-bar">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-path mono">CollegePortal.sln</span>
+                <span class="code-badge mono">.NET</span>
+              </div>
+              <pre class="code code-tree" tabindex="0" aria-label="Структура решения Collegium"><code><span class="tok-dir">CollegePortal.sln</span>
+├── <span class="tok-dir">CollegePortal.Api</span>             <span class="tok-com">// ASP.NET Core 10</span>
+├── <span class="tok-dir">CollegePortal.Application</span>     <span class="tok-com">// use cases, DTO</span>
+├── <span class="tok-dir">CollegePortal.Domain</span>          <span class="tok-com">// entities</span>
+├── <span class="tok-dir">CollegePortal.Infrastructure</span> <span class="tok-com">// EF Core + PostgreSQL</span>
+├── <span class="tok-dir">CollegePortal.Tests</span>           <span class="tok-com">// xUnit</span>
+└── <span class="tok-dir">college-portal-client</span>        <span class="tok-com">// React + TypeScript</span></code></pre>
+              <div class="code-status mono">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>dotnet test</span>
+                <span class="code-status-right">all tests passed</span>
               </div>
             </div>
-          </a>
+            <p class="featured-note mono">
+              <span class="accent">→</span>
+              <span data-i18n="featured.note">Реальный продукт: расписание, оценки и задания в одном месте.</span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="section-num mono">03</p>
+            <h2 class="section-title" id="projectsTitle" data-i18n="projects.title">Проекты</h2>
+            <p class="section-lead" data-i18n="projects.lead">
+              Восемь репозиториев, которые лучше всего описывают то, что я умею.
+            </p>
+          </div>
+          <div class="filters" role="group" aria-label="Фильтр проектов">
+            <button type="button" class="filter is-active" data-filter="all" data-i18n="filters.all">Все</button>
+            <button type="button" class="filter" data-filter="web" data-i18n="filters.web">Web</button>
+            <button type="button" class="filter" data-filter="ai" data-i18n="filters.ai">AI и боты</button>
+            <button type="button" class="filter" data-filter="tools" data-i18n="filters.tools">Инструменты</button>
+            <button type="button" class="filter" data-filter="algo" data-i18n="filters.algo">Алгоритмы</button>
+          </div>
         </div>
 
-        <!-- Calculator Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="400">
-          <a class="card-link" href="https://github.com/max-permyakov/Calculator-on-CS" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/walterCalculator.png" alt="Calculator">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="web" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">01</span>
+              <span class="project-type mono" data-i18n="projects.xenon.type">E-commerce</span>
             </div>
-            <div class="card-body">
-              <h3><i class="fas fa-calculator"></i> Calculator-on-CS</h3>
-              <p>Консольный калькулятор на C#</p>
-              <div class="card-tech">
-                <span>C#</span>
-                <span>Console</span>
-              </div>
+            <h3 class="project-name">XenonStore</h3>
+            <p class="project-path mono">~/projects/xenon-store</p>
+            <p class="project-desc" data-i18n="projects.xenon.desc">
+              Интернет-магазин электроники на ASP.NET Core MVC: каталог с фильтрами, корзина, избранное и полноценная админ-панель.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.xenon.p1">Оформление заказов, роли, поставщики и импорт товаров из CSV</li>
+              <li data-i18n="projects.xenon.p2">Недавно просмотренные, кэширование и Docker-развёртывание</li>
+            </ul>
+            <div class="project-tech">
+              <span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>Docker</span>
             </div>
-          </a>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/XenonStore" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web ai" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">02</span>
+              <span class="project-type mono" data-i18n="projects.messenger.type">AI-мессенджер</span>
+            </div>
+            <h3 class="project-name">Prime Messenger</h3>
+            <p class="project-path mono">~/projects/prime-messenger</p>
+            <p class="project-desc" data-i18n="projects.messenger.desc">
+              Мессенджер с AI-ассистентом на локальной модели Ollama: веб-клиент, real-time чаты и Telegram-бот.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.messenger.p1">Личные и групповые чаты на SignalR, JWT-аутентификация</li>
+              <li data-i18n="projects.messenger.p2">Prime AI, файлы до 5 ГБ, темы оформления и push-уведомления</li>
+            </ul>
+            <div class="project-tech">
+              <span>.NET 10</span><span>React 19</span><span>SignalR</span><span>SQL Server</span><span>Ollama</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/MessengerWithAi" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web ai" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">03</span>
+              <span class="project-type mono" data-i18n="projects.shadowbot.type">Telegram Mini App</span>
+            </div>
+            <h3 class="project-name">ShadowBot</h3>
+            <p class="project-path mono">~/projects/shadowbot</p>
+            <p class="project-desc" data-i18n="projects.shadowbot.desc">
+              Магазин изделий 3D-печати внутри Telegram: каталог, карточки с медиа и заказ в два тапа прямо в чат производителю.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.shadowbot.p1">Админ-панель с загрузкой фото и видео, проверка initData по HMAC</li>
+              <li data-i18n="projects.shadowbot.p2">FastAPI + SQLite + aiogram 3, деплой на Ubuntu через Cloudflare Tunnel</li>
+            </ul>
+            <div class="project-tech">
+              <span>React</span><span>TypeScript</span><span>FastAPI</span><span>SQLite</span><span>aiogram</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/ShadowBot" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ai" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">04</span>
+              <span class="project-type mono" data-i18n="projects.tgbot.type">AI-бот</span>
+            </div>
+            <h3 class="project-name">TgBot-ollama-v2</h3>
+            <p class="project-path mono">~/projects/tgbot-ollama</p>
+            <p class="project-desc" data-i18n="projects.tgbot.desc">
+              Приватный Telegram-бот с локальным LLM: свои личности, история диалогов и поддержка изображений.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.tgbot.p1">Глобальные и приватные system prompt'ы, стриминг ответов</li>
+              <li data-i18n="projects.tgbot.p2">SQLite, управление моделями Ollama и админ-панель</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>aiogram 3</span><span>Ollama</span><span>SQLite</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/TgBot-ollama-v2" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="tools" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">05</span>
+              <span class="project-type mono" data-i18n="projects.r2f.type">Desktop-утилита</span>
+            </div>
+            <h3 class="project-name">R2F</h3>
+            <p class="project-path mono">~/projects/r2f</p>
+            <p class="project-desc" data-i18n="projects.r2f.desc">
+              Утилита для Windows, которая приводит отчёты по практическим работам к единым правилам и находит ошибки оформления.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.r2f.p1">Работа с .docx: шрифты, отступы, рисунки, подписи и автонумерация</li>
+              <li data-i18n="projects.r2f.p2">Сборка в один .exe через PyInstaller, без установки</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>python-docx</span><span>PyInstaller</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/R2F" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">06</span>
+              <span class="project-type mono" data-i18n="projects.tasktracker.type">Web-приложение</span>
+            </div>
+            <h3 class="project-name">TaskTracker</h3>
+            <p class="project-path mono">~/projects/task-tracker</p>
+            <p class="project-desc" data-i18n="projects.tasktracker.desc">
+              Трекер задач на ASP.NET Core MVC с полным CRUD, Entity Framework Core и миграциями.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.tasktracker.p1">Создание, редактирование, просмотр и удаление задач</li>
+              <li data-i18n="projects.tasktracker.p2">Entity Framework Core + SQLite, серверная валидация</li>
+            </ul>
+            <div class="project-tech">
+              <span>C#</span><span>ASP.NET Core MVC</span><span>EF Core</span><span>SQLite</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/TaskTracker" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="algo" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">07</span>
+              <span class="project-type mono" data-i18n="projects.leetcode.type">Алгоритмы</span>
+            </div>
+            <h3 class="project-name">LeetCode Solutions</h3>
+            <p class="project-path mono">~/projects/leetcode</p>
+            <p class="project-desc" data-i18n="projects.leetcode.desc">
+              Коллекция решений LeetCode на C# с тестами: массивы, строки, структуры данных и динамическое программирование.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.leetcode.p1">15 решённых задач: 14 Easy, 1 Medium</li>
+              <li data-i18n="projects.leetcode.p2">Отдельный тестовый проект LeetCodeTest</li>
+            </ul>
+            <div class="project-tech">
+              <span>C#</span><span>Algorithms</span><span>xUnit</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/LeetCode-Solutions" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="algo" data-reveal>
+            <div class="project-head">
+              <span class="project-index mono">08</span>
+              <span class="project-type mono" data-i18n="projects.snake.type">Игра</span>
+            </div>
+            <h3 class="project-name">Snake in Console</h3>
+            <p class="project-path mono">~/projects/snake-cs</p>
+            <p class="project-desc" data-i18n="projects.snake.desc">
+              Классическая змейка в консоли на C#: управление, рост, счёт и ускорение.
+            </p>
+            <ul class="project-points">
+              <li data-i18n="projects.snake.p1">Без сторонних библиотек — только .NET и консоль</li>
+            </ul>
+            <div class="project-tech">
+              <span>C#</span><span>.NET</span><span>Console</span>
+            </div>
+            <div class="project-foot">
+              <a class="project-link" href="https://github.com/max-permyakov/Snake-in-Console-CS" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#icon-github"/></svg>
+                <span data-i18n="projects.repo">Репозиторий</span>
+              </a>
+              <svg class="project-arrow" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </div>
+          </article>
         </div>
 
-        <!-- Learning CS Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="500">
-          <a class="card-link" href="https://github.com/max-permyakov/Learning-CS-4.0" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/way.jpg" alt="Learning Path">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-            </div>
-            <div class="card-body">
-              <h3><i class="fas fa-road"></i> Learning-CS-4.0</h3>
-              <p>Путь изучения .NET и C#</p>
-              <div class="card-tech">
-                <span>C#</span>
-                <span>.NET</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- LeetCode Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="600">
-          <a class="card-link" href="https://github.com/max-permyakov/LeetCode-Solutions" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/lomka.png" alt="LeetCode">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-            </div>
-            <div class="card-body">
-              <h3><i class="fas fa-code"></i> LeetCode-Solutions</h3>
-              <p>Задачки с LeetCode</p>
-              <div class="card-tech">
-                <span>C#</span>
-                <span>Algorithms</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Telegram Bot Project -->
-        <div class="project-card" data-aos="flip-left" data-aos-delay="700">
-          <a class="card-link" href="https://github.com/max-permyakov/telegram-chatbot-with-ollama" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/neuro.png" alt="Telegram Bot">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-            </div>
-            <div class="card-body">
-              <h3><i class="fab fa-telegram"></i> Telegram Bot + Ollama</h3>
-              <p>Телеграм-бот с локальной нейросетью</p>
-              <div class="card-tech">
-                <span>Python</span>
-                <span>Ollama</span>
-                <span>AI</span>
-              </div>
-            </div>
+        <div class="more-repos" data-reveal>
+          <p class="more-title" data-i18n="projects.noteText">Ещё на GitHub</p>
+          <ul class="more-list">
+            <li><a href="https://github.com/max-permyakov/telegram-chatbot-with-ollama" target="_blank" rel="noopener noreferrer">telegram-chatbot-with-ollama <span class="mono">Python · Ollama</span></a></li>
+            <li><a href="https://github.com/max-permyakov/Learn-main-algorithms-CS" target="_blank" rel="noopener noreferrer">Learn-main-algorithms-CS <span class="mono">C# · Algorithms</span></a></li>
+            <li><a href="https://github.com/max-permyakov/Learning-CS-4.0" target="_blank" rel="noopener noreferrer">Learning-CS-4.0 <span class="mono">C# · .NET</span></a></li>
+          </ul>
+          <a class="more-link mono" href="https://github.com/max-permyakov?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="projects.allRepos">Все репозитории на GitHub</span>
+            <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Other Projects Section -->
-  <section class="other-projects section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-folder-open"></i> <strong>Другие проекты</strong></h2>
-      
-      <div class="project-list">
-        <!-- ColdM1ndBot -->
-        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-          <a class="card-link" href="https://t.me/ColdM1ndbot" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/rabotaet.png" alt="ColdM1ndBot">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-              <span class="telegram-label"><i class="fab fa-telegram"></i> Telegram Bot</span>
-            </div>
-            <div class="card-body">
-              <h3><i class="fas fa-user-circle"></i> ColdM1ndBot</h3>
-              <p>Личный Телеграм-бот: информация обо мне и погода</p>
-              <div class="card-tech">
-                <span>Telegram API</span>
-                <span>Weather API</span>
-              </div>
-            </div>
-          </a>
+    <section class="section" id="stack" aria-labelledby="stackTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-num mono">04</p>
+          <h2 class="section-title" id="stackTitle" data-i18n="stack.title">Стек</h2>
+          <p class="section-lead" data-i18n="stack.lead">
+            Инструменты, с которыми я работаю каждый день — от базы данных до деплоя.
+          </p>
         </div>
 
-        <!-- Benjamin Bot -->
-        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-          <a class="card-link" href="https://t.me/Benjamin_asistent_bot" target="_blank" rel="noopener noreferrer">
-            <div class="card-image-wrapper">
-              <img src="resurses/robot.jpg" alt="Benjamin">
-              <span class="card-badge" aria-hidden="true"><i class="fas fa-external-link-alt"></i></span>
-              <span class="telegram-label"><i class="fab fa-telegram"></i> Telegram Bot</span>
+        <div class="stack-grid">
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">01</span>
+              <h3 data-i18n="stack.backend.title">Backend</h3>
             </div>
-            <div class="card-body">
-              <h3><i class="fas fa-robot"></i> Benjamin</h3>
-              <p>Телеграм-бот-собеседник (ollama + нейросети)</p>
-              <div class="card-tech">
-                <span>Python</span>
-                <span>Ollama</span>
-                <span>AI</span>
-              </div>
+            <p data-i18n="stack.backend.desc">API, бизнес-логика и доступ к данным</p>
+            <ul class="tag-list">
+              <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>EF Core</li><li>REST API</li><li>SignalR</li><li>Identity / JWT</li><li>xUnit</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">02</span>
+              <h3 data-i18n="stack.frontend.title">Frontend</h3>
             </div>
-          </a>
+            <p data-i18n="stack.frontend.desc">Интерфейсы, состояние и сборка</p>
+            <ul class="tag-list">
+              <li>React</li><li>TypeScript</li><li>JavaScript</li><li>Vite</li><li>TanStack Query</li><li>SCSS</li><li>HTML / CSS</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">03</span>
+              <h3 data-i18n="stack.data.title">Данные</h3>
+            </div>
+            <p data-i18n="stack.data.desc">Схемы, запросы и миграции</p>
+            <ul class="tag-list">
+              <li>PostgreSQL</li><li>SQL Server</li><li>SQLite</li><li>EF Core Migrations</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">04</span>
+              <h3 data-i18n="stack.ai.title">AI и боты</h3>
+            </div>
+            <p data-i18n="stack.ai.desc">Локальные модели и Telegram</p>
+            <ul class="tag-list">
+              <li>Ollama</li><li>Python</li><li>aiogram</li><li>python-telegram-bot</li><li>FastAPI</li><li>Telegram Mini Apps</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">05</span>
+              <h3 data-i18n="stack.infra.title">Инфраструктура</h3>
+            </div>
+            <p data-i18n="stack.infra.desc">От локального запуска до продакшена</p>
+            <ul class="tag-list">
+              <li>Docker</li><li>Linux / Ubuntu</li><li>systemd</li><li>Cloudflare Tunnel</li><li>GitHub Actions</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-head">
+              <span class="stack-num mono">06</span>
+              <h3 data-i18n="stack.tools.title">Инструменты</h3>
+            </div>
+            <p data-i18n="stack.tools.desc">Среда разработки и документация</p>
+            <ul class="tag-list">
+              <li>Git</li><li>GitHub</li><li>Visual Studio</li><li>VS Code</li><li>PyCharm</li><li>Swagger / OpenAPI</li>
+            </ul>
+          </article>
         </div>
       </div>
+    </section>
 
-      <p class="projects-note">
-        <i class="fas fa-info-circle"></i> 
-        Проекты работают на локальном сервере. Для демонстрации напишите мне в Telegram.
-      </p>
-    </div>
-  </section>
+    <section class="section section--contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="contact-panel" data-reveal>
+          <p class="section-num mono">05</p>
+          <h2 class="contact-title" id="contactTitle" data-i18n="contact.title">
+            Давайте сделаем что‑то стоящее
+          </h2>
+          <p class="contact-lead" data-i18n="contact.lead">
+            Открыт к стажировке, junior-позициям и интересным проектам. Быстрее всего отвечу в Telegram.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://t.me/Massimo_16" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#icon-telegram"/></svg>
+              <span data-i18n="contact.cta">Написать в Telegram</span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/max-permyakov" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#icon-github"/></svg>
+              <span data-i18n="contact.github">Профиль на GitHub</span>
+            </a>
+          </div>
 
-  <!-- Social Section -->
-  <section class="social section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-link"></i> <strong>Социальные сети</strong></h2>
-      
-      <div class="social-icons">
-        <a href="https://github.com/max-permyakov/" class="icon github" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
-        <a href="https://t.me/Massimo_16" class="icon telegram" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="200">
-          <i class="fab fa-telegram"></i>
-          <span>Telegram</span>
-        </a>
-        <a href="https://leetcode.com/u/max-permyakov/" class="icon leetcode" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fas fa-code"></i>
-          <span>LeetCode</span>
-        </a>
+          <div class="contact-cards">
+            <a class="contact-card" href="https://t.me/Massimo_16" target="_blank" rel="noopener noreferrer">
+              <svg class="contact-icon" aria-hidden="true"><use href="#icon-telegram"/></svg>
+              <span class="contact-card-body">
+                <strong>Telegram</strong>
+                <em data-i18n="contact.tgNote">Самый быстрый способ связи</em>
+              </span>
+              <span class="mono contact-handle">@Massimo_16</span>
+            </a>
+            <a class="contact-card" href="https://github.com/max-permyakov" target="_blank" rel="noopener noreferrer">
+              <svg class="contact-icon" aria-hidden="true"><use href="#icon-github"/></svg>
+              <span class="contact-card-body">
+                <strong>GitHub</strong>
+                <em data-i18n="contact.ghNote">Код, коммиты и README</em>
+              </span>
+              <span class="mono contact-handle">@max-permyakov</span>
+            </a>
+            <a class="contact-card" href="https://leetcode.com/u/max-permyakov/" target="_blank" rel="noopener noreferrer">
+              <svg class="contact-icon" aria-hidden="true"><use href="#icon-code"/></svg>
+              <span class="contact-card-body">
+                <strong>LeetCode</strong>
+                <em data-i18n="contact.lcNote">15 задач на C#</em>
+              </span>
+              <span class="mono contact-handle">max-permyakov</span>
+            </a>
+          </div>
+
+          <p class="contact-note mono" data-i18n="contact.note">Краснодар · UTC+3 · ru / en</p>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="contact-cta" data-aos="fade-up" data-aos-delay="400">
-        <p>Хотите связаться или предложить проект?</p>
-        <a href="https://t.me/Massimo_16" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-telegram"></i> Написать в Telegram
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>© 2026 Maksim Permyakov. All rights reserved.</p>
-      <p class="footer-quote"><i class="fas fa-quote-left"></i> Code is poetry written in logic <i class="fas fa-quote-right"></i></p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.rights">© 2026 Максим Пермяков</p>
+      <p class="footer-built" data-i18n="footer.built">Собрано на HTML, CSS и JavaScript. Без фреймворков.</p>
+      <a class="footer-top mono" href="#top">
+        <span data-i18n="footer.top">Наверх</span>
+        <svg aria-hidden="true"><use href="#icon-arrow-up"/></svg>
+      </a>
     </div>
   </footer>
 
-  <!-- AOS Animation Library Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
-    });
-
-    // Typing Effect
-    const typingText = document.querySelector('.typing-text');
-    const phrases = [
-      'Разрабатываю backend на C# и .NET',
-      'Создаю Telegram-ботов с AI',
-      'Изучаю Python и JavaScript',
-      'Решаю задачи на LeetCode',
-      'Стремлюсь стать профессионалом'
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
-
-    function type() {
-      const currentPhrase = phrases[phraseIndex];
-      
-      if (isDeleting) {
-        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 50;
-      } else {
-        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
-      }
-
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        isDeleting = true;
-        typingSpeed = 2000;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typingSpeed = 500;
-      }
-
-      setTimeout(type, typingSpeed);
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Максим Пермяков",
+      "url": "https://max-permyakov.github.io/portfolio/",
+      "image": "https://avatars.githubusercontent.com/u/224455142?v=4",
+      "jobTitle": "Full-stack Developer",
+      "description": "Full-stack разработчик: ASP.NET Core, C#, React, TypeScript, Python, локальные AI-модели.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Краснодар",
+        "addressCountry": "RU"
+      },
+      "knowsAbout": ["C#", ".NET", "ASP.NET Core", "React", "TypeScript", "Python", "PostgreSQL", "Ollama"],
+      "sameAs": [
+        "https://github.com/max-permyakov",
+        "https://t.me/Massimo_16",
+        "https://leetcode.com/u/max-permyakov/"
+      ]
     }
-
-    document.addEventListener('DOMContentLoaded', type);
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Add scroll animation to hero
-    window.addEventListener('scroll', () => {
-      const scrollIndicator = document.querySelector('.scroll-indicator');
-      if (scrollIndicator) {
-        scrollIndicator.style.opacity = 1 - (window.scrollY / 500);
-      }
-    });
   </script>
 </body>
 </html>
